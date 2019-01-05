@@ -17,8 +17,8 @@ functions:
     handler: handler.s3_notifications
     events:
       - s3:
-        bucket: ${env:BUCKET}
-        event: "s3:ObjectCreated:*"
+          bucket: ${env:BUCKET}
+          event: "s3:ObjectCreated:*"
         
 #      - s3: ${env:BUCKET}
 #      - schedule: rate(10 minutes)
@@ -47,12 +47,12 @@ functions:
 #      variable2: value2
 
 # you can add CloudFormation resource templates here
-#resources:
-#  Resources:
-#    NewResource:
-#      Type: AWS::S3::Bucket
-#      Properties:
-#        BucketName: my-new-bucket
+# resources:
+#   Resources:
+#     NewResource:
+#       Type: AWS::S3::Bucket
+#       Properties:
+#         BucketName: ${env:BUCKET}
 #  Outputs:
 #     NewOutput:
 #       Description: "Description for the output"
